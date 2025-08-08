@@ -1,7 +1,7 @@
 import React from 'react'
 import img1 from '../../assets/women.png';
 import img2 from '../../assets/shopping.png';
-import img3 from '../../assets/Sale.png'
+import img3 from '../../assets/sale.png'
 import Slider from 'react-slick';
 
 let ImageList = [
