@@ -9,9 +9,16 @@ import Banner from './components/banner/Banner';
 import Subscribe from './components/Subscribe.jsx/Subscribe';
 import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer/Footer';
+import Popup from './components/Popup/Popup';
 
 
 const App = () => {
+
+  let [orderPopup, setOrderPopup] = React.useState(false);
+  let handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  }
+
 
   React.useEffect(() => {
     AOS.init({
@@ -25,14 +32,15 @@ const App = () => {
 
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <TopProducts/>
+      <Navbar handleOrderPopup={handleOrderPopup}/>
+      <Hero handleOrderPopup={handleOrderPopup}/>
+      <TopProducts handleOrderPopup={handleOrderPopup}/>
       <Banner/>
       <Subscribe/>
       <Products/>
       <Testimonials/>
       <Footer/>
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup}/>
     </div>
   )
 }
