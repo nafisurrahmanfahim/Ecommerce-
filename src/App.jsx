@@ -8,6 +8,7 @@ import TopProducts from './components/TopProducts/TopProducts';
 import Banner from './components/banner/Banner';
 import Subscribe from './components/Subscribe.jsx/Subscribe';
 import Testimonials from './components/Testimonials/Testimonials';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Subscribe/>
       <Products/>
       <Testimonials/>
+      <Footer/>
     </div>
   )
 }
